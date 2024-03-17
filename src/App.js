@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import UploadAudio from './UploadAudio';
+import ListAudio from './ListAudio';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Sidebar from './Sidebar';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='backdrop-blur-sm h-screen w-full'>
+      <BrowserRouter>
+
+        <Routes>
+
+          <Route path="/"
+            element={<ListAudio />}
+          />
+          <Route path="/upload"
+            element={<UploadAudio />}
+          />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

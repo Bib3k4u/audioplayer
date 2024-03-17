@@ -1,0 +1,12 @@
+.playing-indicator {
+    width: 10px;
+    height: 10px;
+    background-color: green; /* Change the color as desired */
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.playing {
+    color: blue; /* Change the color as desired */
+}
